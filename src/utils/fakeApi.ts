@@ -54,12 +54,6 @@ const createSuccessResponse = <T>(data: T, pagination?: PaginationInfo): ApiResp
   pagination
 });
 
-const createErrorResponse = (error: ApiError): ApiResponse<null> => ({
-  data: null as any,
-  success: false,
-  message: error.message
-});
-
 // Mock data
 const courses: Course[] = [
   {
@@ -333,9 +327,9 @@ export const fakeApi = {
       const searchLower = query.search.toLowerCase();
       filteredCourses = filteredCourses.filter(course => 
         course.title.toLowerCase().includes(searchLower) ||
-        course.titleAr.includes(query.search) ||
+        course.titleAr.includes(searchLower) ||
         course.description.toLowerCase().includes(searchLower) ||
-        course.descriptionAr.includes(query.search)
+        course.descriptionAr.includes(searchLower)
       );
     }
 
@@ -438,9 +432,9 @@ export const fakeApi = {
       const searchLower = query.search.toLowerCase();
       filteredInstructors = filteredInstructors.filter(instructor => 
         instructor.name.toLowerCase().includes(searchLower) ||
-        instructor.nameAr.includes(query.search) ||
+        instructor.nameAr.toLowerCase().includes(searchLower) ||
         instructor.bio.toLowerCase().includes(searchLower) ||
-        instructor.bioAr.includes(query.search)
+        instructor.bioAr.toLowerCase().includes(searchLower)
       );
     }
 

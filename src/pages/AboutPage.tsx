@@ -12,13 +12,11 @@ import {
   GraduationCap,
   Lightbulb,
   Shield,
-  Clock,
-  Star
+  Clock
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutPage: React.FC = () => {
-  const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
   const stats = [

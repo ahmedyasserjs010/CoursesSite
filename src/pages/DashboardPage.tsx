@@ -5,10 +5,8 @@ import {
   BookOpen, 
   Clock, 
   Award, 
-  TrendingUp,
   Play,
   CheckCircle,
-  Calendar,
   Star,
   Download,
   Eye

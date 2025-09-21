@@ -8,12 +8,10 @@ import {
   Users, 
   Star, 
   BookOpen, 
-  Download, 
   Share2,
   Bookmark,
   CheckCircle,
-  Lock,
-  ExternalLink
+  Lock
 } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -236,7 +234,7 @@ const CourseDetailPage: React.FC = () => {
                         {t('courses.whatYouWillLearn')}
                       </h3>
                       <ul className="space-y-2">
-                        {course.lessons.slice(0, 5).map((lesson, index) => (
+                        {course.lessons.slice(0, 5).map((lesson) => (
                           <li key={lesson.id} className="flex items-start space-x-3 rtl:space-x-reverse">
                             <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-700 dark:text-gray-300">
