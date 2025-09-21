@@ -7,8 +7,8 @@ import {
   MapPin, 
   Clock, 
   Send, 
-  MessageCircle,
-  Headphones,
+  // MessageCircle,
+  // Headphones,
   HelpCircle,
   Globe,
   Facebook,
@@ -284,23 +284,27 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Inquiry Type
-                    </label>
-                    <select
-                      name="inquiryType"
-                      value={formData.inquiryType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                    >
-                      {inquiryTypes.map((type) => (
-                        <option key={type.value} value={type.value}>
-                          {isRTL ? type.labelAr : type.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+<div>
+  <label
+    htmlFor="inquiryType"
+    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+  >
+    Inquiry Type
+  </label>
+  <select
+    id="inquiryType"
+    name="inquiryType"
+    value={formData.inquiryType}
+    onChange={handleInputChange}
+    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+  >
+    {inquiryTypes.map((type) => (
+      <option key={type.value} value={type.value}>
+        {isRTL ? type.labelAr : type.label}
+      </option>
+    ))}
+  </select>
+</div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

@@ -289,13 +289,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Vitest** - Testing framework
 - **Testing Library** - Component testing
 
-## 📞 Support
-
-If you have any questions or need help, please:
-1. Check the [Issues](https://github.com/yourusername/teach-programming/issues) page
-2. Create a new issue with detailed description
-3. Contact the maintainers
-
 ---
 
 Made with ❤️ for learners worldwide
